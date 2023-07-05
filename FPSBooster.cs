@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class FPSBooster : MonoBehaviour
 {
-    int target = 60;
+    int target = Screen.currentResolution.refreshRate;
 
     private void Update()
     {
         if (Application.targetFrameRate != target)
         {
-            Application.targetFrameRate = target; //Specifies the frame rate at which Unity tries to render game.
+            Application.targetFrameRate = target;
         }
     }
+
 }
